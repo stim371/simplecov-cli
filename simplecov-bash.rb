@@ -10,15 +10,15 @@ puts "the repo name is: #{repo_name}"
 puts "cloning remote repo..."
 %x[git clone "#{remote_repo}"]
 
-# create .simplecov file
-File.open(".simplecov", "w") do |r|
-  r.syswrite("SimpleCov.start")
-end
-
 # change into the project directory
 base_path = Dir.pwd + "/" + repo_name
 puts "switching to #{base_path}"
 Dir.chdir(base_path)
+
+# create .simplecov file
+File.open(".simplecov", "w") do |r|
+  r.syswrite("SimpleCov.start")
+end
 
 # install the gem if you don't have it already
 unless list.scan /^simplecov /
@@ -56,6 +56,9 @@ if File.exists? "features"
   puts "modified cucumber env"
 end
 
+puts "running tests"
+%x[rspec]
 
-
-# puts ""
+puts "opening coverage report"
+Dir.chdir("coverage")
+%x[open "index.html"]
