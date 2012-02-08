@@ -1,4 +1,4 @@
-# Simplecov-bash
+# Simplecov-cli - quick test-coverage checks of any repo
 
 This is a quick ruby script to pull the repository of ruby code, run its tests and display the code coverage of its test suite.
 
