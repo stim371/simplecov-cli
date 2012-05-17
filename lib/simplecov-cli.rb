@@ -18,6 +18,7 @@ module SimplecovCLI
   end
 end
 
+#TODO: everything below this was the original hacked-together file. convert it to methods
 
 # set up values needed
 remote_repo = ARGV[0]
