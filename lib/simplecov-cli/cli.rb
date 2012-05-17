@@ -1,4 +1,5 @@
 # require 'simplecov-cli'
+require 'optparse'
 
 module SimplecovCLI
   class Cli
@@ -6,7 +7,18 @@ module SimplecovCLI
       
       exit 1 if args.empty?
       
-      out << check_coverage(args)
+      OptionParser.new{ |opts|
+        opts.banner = "Usage:\n   simplecov-cli [options] <repository url>"
+        opts.separator "\nOptions: "
+        
+        opts.on_tail("-v", "--version", "Print the version number") do
+          require "simplecov-cli/version"
+          out << "Simplecov-cli #{SimplecovCLI::VERSION}\n"
+          exit
+        end
+      }.parse!(args)
+      
+      # out << SimplecovCLI.check_coverage(args)
       exit 0
     end
   end

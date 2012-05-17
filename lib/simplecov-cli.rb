@@ -1,3 +1,24 @@
+module SimplecovCLI
+  extend self
+  
+  def check_coverage repo_url
+    # set up values
+    # clone repo from github
+    # switch into project directory
+    # create .simplecov file
+    # install simplecov gem
+      # if not installed
+    # install dependencies
+    # put require statements in test helper files
+      # test, spec, features
+    # run tests
+    # open coverage report
+    # clean up?
+      # use options parser to decide whether to clean up
+  end
+end
+
+
 # set up values needed
 remote_repo = ARGV[0]
 list = %x[gem list]

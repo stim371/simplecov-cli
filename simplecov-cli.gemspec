@@ -4,7 +4,7 @@ require 'simplecov-cli/version'
 
 Gem::Specification.new do |gem|
   gem.name = 'simplecov-cli'
-  gem.version = "0.1.0"
+  gem.version = SimplecovCLI::VERSION
   gem.platform = Gem::Platform::RUBY
   gem.authors = ["Joel Stimson"]
   gem.email = ['contact@cleanroomstudios.com']
