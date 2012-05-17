@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # set up values needed
 remote_repo = ARGV[0]
 list = %x[gem list]

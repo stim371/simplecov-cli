@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'simplecov-cli/cli'
 
 SimplecovCLI::Cli.run ARGV
