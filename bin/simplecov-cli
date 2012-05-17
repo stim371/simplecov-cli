@@ -1,0 +1,3 @@
+require 'simplecov-cli/cli'
+
+SimplecovCLI::Cli.run ARGV
