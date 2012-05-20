@@ -1,4 +1,4 @@
-# require 'simplecov-cli'
+require 'simplecov-cli'
 require 'optparse'
 
 module SimplecovCLI
@@ -28,7 +28,8 @@ module SimplecovCLI
         end
       }.parse!(args)
       
-      # out << SimplecovCLI.check_coverage(args)
+      out << SimplecovCLI.check_coverage(args[0])
+      # out << args.to_s + "\n"
       exit 0
     end
   end
